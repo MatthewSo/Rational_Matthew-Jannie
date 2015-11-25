@@ -131,15 +131,19 @@ public class Rational{
         else{
 	    return -1;}
     }
-    
+
+    // equals
+    // Takes 1 Object as input
+    // Returns true if input is of class Rational and of equal value to calling instance of Rational
+    // Returns false otherwise
     public boolean equals(Object other){
-	if (other.getClass() == this.getClass()){
-	    Rational newother = (Rational)other;
-	    newother.reduce();
+	if (other.getClass() == this.getClass()){ //compares the instance variables in the two objects
+	    Rational newother = (Rational)other; //create a rational instance of the inout
+	    newother.reduce(); //reduce both
 	    this.reduce();
-	    if (this.numerator == newother.numerator && this.denominator == newother.denominator){
-		return true;}}
-	return false;}
+	    if (this.numerator == newother.numerator && this.denominator == newother.denominator){ //compare
+		return true;}} //return true if the same
+	return false;} //false in all other situations
 	
   /*=====Example=of=Multiply=====
   Rational r = new Rational(2,3); //Stores the rational number 2/3
@@ -201,8 +205,8 @@ public class Rational{
 	Rational test11 = new Rational(1,2);
 	Rational test12 = new Rational(5,10);
 	Rational test13 = new Rational(3,4);
-	System.out.println(test11.equals(test12));
-	System.out.println(test11.equals(test13));
-	System.out.println(test13.equals(test12));
+	System.out.println(test11.equals(test12)); //return true
+	System.out.println(test11.equals(test13)); //return false
+	System.out.println(test13.equals(test12)); //return false
   }
 }
