@@ -131,6 +131,15 @@ public class Rational{
         else{
 	    return -1;}
     }
+    
+    public boolean equals(Object other){
+	if (other.getClass() == this.getClass()){
+	    Rational newother = (Rational)other;
+	    newother.reduce();
+	    this.reduce();
+	    if (this.numerator == newother.numerator && this.denominator == newother.denominator){
+		return true;}}
+	return false;}
 	
   /*=====Example=of=Multiply=====
   Rational r = new Rational(2,3); //Stores the rational number 2/3
@@ -186,6 +195,14 @@ public class Rational{
 	System.out.println(test8.compareTo(test9)); //should be 0
 	System.out.println(test10.compareTo(test8)); //should be 1
 	System.out.println(test8.compareTo(test10)); //should be -1
-  	
+
+	
+  	//testing equals()
+	Rational test11 = new Rational(1,2);
+	Rational test12 = new Rational(5,10);
+	Rational test13 = new Rational(3,4);
+	System.out.println(test11.equals(test12));
+	System.out.println(test11.equals(test13));
+	System.out.println(test13.equals(test12));
   }
 }
