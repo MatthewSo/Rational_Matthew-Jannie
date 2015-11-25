@@ -1,8 +1,8 @@
 /*
-EEA - Matthew "Triangle" So, Lorenz "Big L" Vargas
+The Don't Café - Matthew So & Jannie Li
 APCS1 pd10
-HW32 -- Irrationality stops here
-2015-11-18
+HW37 -- Rational Equality
+2015-11-25
 */
 
 public class Rational{
